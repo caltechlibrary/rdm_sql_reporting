@@ -12,7 +12,7 @@ authors:
 
 repository-code: "https://github.com/caltechlibrary/rdm_sql_reporting"
 version: 0.0.1
-license-url: "https://spdx.org/licenses/BSD-3-Clause-Clear"
+license-url: "https://caltechlibrary.github.io/eprinttools/license.html"
 keywords: [ "rdms", "data analysis" ]
 
 ---
@@ -31,7 +31,7 @@ About this software
 This is an ad-hoc collection of Bash scripts for working with Invenio
 RDM repositories via Postgres database tables
 
-- License: https://spdx.org/licenses/BSD-3-Clause-Clear
+- License: https://caltechlibrary.github.io/eprinttools/license.html
 - GitHub: https://github.com/caltechlibrary/rdm_sql_reporting
 - Issues: https://github.com/caltechlibrary/rdm_sql_reporting/issues
 

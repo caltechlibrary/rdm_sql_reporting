@@ -13,5 +13,5 @@ authors:
 
 repository-code: "https://github.com/caltechlibrary/rdm_sql_reporting"
 version: 0.0.1
-license-url: "https://spdx.org/licenses/BSD-3-Clause-Clear"
+license-url: "https://caltechlibrary.github.io/eprinttools/license.html"
 keywords: [ "rdms", "data analysis" ]
