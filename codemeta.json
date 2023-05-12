@@ -1,7 +1,7 @@
 {
     "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
     "@type": "SoftwareSourceCode",
-    "license": "https://caltechlibrary.github.io/eprinttools/license.html",
+    "license": "https://caltechlibrary.github.io/rdm_sql_reporting/LICENSE",
     "codeRepository": "https://github.com/caltechlibrary/rdm_sql_reporting",
     "dateCreated": "2023-05-12",
     "issueTracker": "https://github.com/caltechlibrary/rdm_sql_reporting/issues",

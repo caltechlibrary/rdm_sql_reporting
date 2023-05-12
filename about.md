@@ -12,7 +12,7 @@ authors:
 
 repository-code: "https://github.com/caltechlibrary/rdm_sql_reporting"
 version: 0.0.1
-license-url: "https://caltechlibrary.github.io/eprinttools/license.html"
+license-url: "https://caltechlibrary.github.io/rdm_sql_reporting/LICENSE"
 keywords: [ "rdms", "data analysis" ]
 
 ---
@@ -31,7 +31,7 @@ About this software
 This is an ad-hoc collection of Bash scripts for working with Invenio
 RDM repositories via Postgres database tables
 
-- License: https://caltechlibrary.github.io/eprinttools/license.html
+- License: https://caltechlibrary.github.io/rdm_sql_reporting/LICENSE
 - GitHub: https://github.com/caltechlibrary/rdm_sql_reporting
 - Issues: https://github.com/caltechlibrary/rdm_sql_reporting/issues
 
