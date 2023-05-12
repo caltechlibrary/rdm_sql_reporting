@@ -3,8 +3,6 @@
 #
 PROJECT = rdm_sql_reporting
 
-PROGRAMS = #$(shell ls -1 cmd)
-
 BASH_SCRIPTS = $(shell ls -1 *.bash)
 
 MAN_PAGES = $(shell ls -1 *.1.md | sed -E 's/\.1.md/.1/g')
@@ -34,27 +32,9 @@ ifeq ($(OS), Windows)
 	EXT = .exe
 endif
 
-build: version.go $(PROGRAMS) $(MAN_PAGES) CITATION.cff about.md
-
-version.go: .FORCE
-	@echo "package $(PROJECT)" >version.go
-	@echo '' >>version.go
-	@echo 'const (' >>version.go
-	@echo '    Version = "$(VERSION)"' >>version.go
-	@echo '    LicenseText = `' >>version.go
-	@cat LICENSE >> version.go
-	@echo '`' >>version.go
-	@echo ')' >>version.go
-	@echo '' >>version.go
-	@echo '' >>version.go
-	@git add version.go
-	@if [ -f bin/codemeta ]; then ./bin/codemeta; fi
+build: $(MAN_PAGES) CITATION.cff about.md website
 
 man: $(MAN_PAGES)
-
-$(PROGRAMS): $(PACKAGE)
-	@mkdir -p bin
-	go build -o "bin/$@$(EXT)" cmd/$@/*.go
 
 $(MAN_PAGES): .FORCE
 	mkdir -p man/man1
