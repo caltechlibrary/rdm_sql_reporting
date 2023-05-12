@@ -7,7 +7,7 @@ BASH_SCRIPTS = $(shell ls -1 *.bash)
 
 MAN_PAGES = $(shell ls -1 *.1.md | sed -E 's/\.1.md/.1/g')
 
-PACKAGE = $(shell ls -1 *.go)
+HTML_PAGES = $(shell find . -type f | grep -E '\.html')
 
 PANDOC = $(shell which pandoc)
 
@@ -44,16 +44,13 @@ CITATION.cff: codemeta.json
 	cat codemeta.json | sed -E   's/"@context"/"at__context"/g;s/"@type"/"at__type"/g;s/"@id"/"at__id"/g' >_codemeta.json
 	if [ -f $(PANDOC) ]; then echo "" | $(PANDOC) --metadata title="Cite $(PROJECT)" --metadata-file=_codemeta.json --template=codemeta-cff.tmpl >CITATION.cff; fi
 
-about.md: codemeta.json $(PROGRAMS)
+about.md: codemeta.json .FORCE
 	cat codemeta.json | sed -E 's/"@context"/"at__context"/g;s/"@type"/"at__type"/g;s/"@id"/"at__id"/g' >_codemeta.json
 	if [ -f $(PANDOC) ]; then echo "" | pandoc --metadata-file=_codemeta.json --template codemeta-md.tmpl >about.md 2>/dev/null; fi
 	if [ -f _codemeta.json ]; then rm _codemeta.json; fi
 
 
-test: $(PACKAGE)
-	go test
-
-website: #clean-website
+website: clean-website
 	make -f website.mak
 
 status:
@@ -83,7 +80,7 @@ clean:
 	@if [ -d testout ]; then rm -fR testout; fi
 
 clean-website:
-	@for FNAME in $(shell find . -type f | grep '.html'); do rm $$FNAME; done
+	@for FNAME in $(HTML_PAGES); do rm "$${FNAME}"; done
 
 install: build
 	@echo "Installing programs in $(PREFIX)/bin"

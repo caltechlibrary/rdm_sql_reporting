@@ -31,14 +31,13 @@ About this software
 This is an ad-hoc collection of Bash scripts for working with Invenio
 RDM repositories via Postgres database tables
 
-- License: https://caltechlibrary.github.io/rdm_sql_reporting/LICENSE
-- GitHub: https://github.com/caltechlibrary/rdm_sql_reporting
-- Issues: https://github.com/caltechlibrary/rdm_sql_reporting/issues
+- License: <https://caltechlibrary.github.io/rdm_sql_reporting/LICENSE>
+- GitHub: <https://github.com/caltechlibrary/rdm_sql_reporting>
+- Issues: <https://github.com/caltechlibrary/rdm_sql_reporting/issues>
 
 
 ### Programming languages
 
-- Go
 - SQL
 - Bash
 - Make
@@ -51,7 +50,7 @@ RDM repositories via Postgres database tables
 
 ### Software Requiremets
 
-- Go 1.19.5 or better
 - Bash
 - Make
+- Pandoc 3 or better
 - Postgres 15 or better client

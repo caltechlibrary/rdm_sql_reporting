@@ -22,4 +22,7 @@ psql -h localhost -p 5432 -U <my-user> -d <my-database>
 
 # Reference links
 
-- [from stack overflow](https://stackoverflow.com/questions/37694987/connecting-to-postgresql-in-a-docker-container-from-outside)
+- from stack overflow
+    - <https://stackoverflow.com/questions/37694987/connecting-to-postgresql-in-a-docker-container-from-outside>
+    - <https://stackoverflow.com/questions/75978030/how-can-i-give-docker-containers-access-to-postgresql-running-on-the-host>
+
