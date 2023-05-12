@@ -27,6 +27,26 @@ dump-rdm-records.bash REPO_ID
 Dump the Postgres database for an Invenio RDM instance.
 The resulting SQL files will include a datestamp in their name and be
 saved to a directory called \[lq]sql-dumps\[rq].
+.SH SETUP
+.PP
+This script loads a configuration environment based on the repository
+name.
+The configuration file looks like this
+.IP
+.nf
+\f[C]
+export DB_NAME=\[dq]<DB_NAME_GOES_HERE>\[dq]
+export DB_USERNAME=\[dq]<DB_USERNAME_GOES_HERE>\[dq]
+\f[R]
+.fi
+.PP
+You\[cq]d replace the contents in the angle brackes with appropriate
+values.
+The repository id (name) is included in the name of the configuration
+file.
+E.g.
+caltechauthors repository name would use a configuration file of
+\[lq]caltechauthors_postgres_env.cfg\[rq].
 .SH EXAMPLES
 .PP
 Backup the Postgres running for caltechdata running on CaltechDATA.
