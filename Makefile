@@ -3,7 +3,7 @@
 #
 PROJECT = rdm_sql_reporting
 
-PROGRAMS = $(shell ls -1 cmd)
+PROGRAMS = #$(shell ls -1 cmd)
 
 BASH_SCRIPTS = $(shell ls -1 *.bash)
 
