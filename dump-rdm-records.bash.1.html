@@ -30,6 +30,15 @@
 <p>Dump the Postgres database for an Invenio RDM instance. The resulting
 SQL files will include a datestamp in their name and be saved to a
 directory called “sql-dumps”.</p>
+<h1 id="setup">SETUP</h1>
+<p>This script loads a configuration environment based on the repository
+name. The configuration file looks like this</p>
+<pre><code>export DB_NAME=&quot;&lt;DB_NAME_GOES_HERE&gt;&quot;
+export DB_USERNAME=&quot;&lt;DB_USERNAME_GOES_HERE&gt;&quot;</code></pre>
+<p>You’d replace the contents in the angle brackes with appropriate
+values. The repository id (name) is included in the name of the
+configuration file. E.g. caltechauthors repository name would use a
+configuration file of “caltechauthors_postgres_env.cfg”.</p>
 <h1 id="examples">EXAMPLES</h1>
 <p>Backup the Postgres running for caltechdata running on
 CaltechDATA.</p>
