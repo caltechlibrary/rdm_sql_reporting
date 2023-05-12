@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EPrint SQL Reporting (Concept)</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://caltechlibrary.github.io/css/site.css">
+</head>
+<body>
+<header>
+<a href="http://library.caltech.edu" title="link to Caltech Library Homepage"><img src="https://caltechlibrary.github.io/assets/liblogo.gif" alt="Caltech Library logo"></a>
+</header>
+<nav>
+<ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="index.html">README</a></li>
+    <li><a href="LICENSE">LICENSE</a></li>
+    <li><a href="install.html">INSTALL</a></li>
+    <li><a href="user-manual.html">User Manual</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="https://github.com/caltechlibrary/eprint_sql_reporting">GitHub</a></li>
+</ul>
+</nav>
+
+<section>
+<h1 id="connecting-to-postgres-running-in-docker">Connecting to Postgres
+running in Docker</h1>
+<p>Currently we deploy RDM via docker containers. This includes
+Postgres. It would be terribly convient to have access to the Postgres
+running inside Docker without needing to use the docker wrapper
+command.</p>
+<pre><code>docker run --name $POSTRES_CONTAINER_NAME \
+           -e POSTGRES_PASSWORD=$PG_PASSWORD \
+           -it -p 5432:5432 postgres</code></pre>
+<p>If the port 5432 is not available (e.g. it is taken by another
+Postgres instance) in the host you can change the mapping to a free port
+.</p>
+<p>Once the container port is mapped to the host’s localhost port you
+should be able to access it in the usual way using
+<code>psql</code>.</p>
+<pre><code>psql -h localhost -p 5432 -U &lt;my-user&gt; -d &lt;my-database&gt;</code></pre>
+<h1 id="reference-links">Reference links</h1>
+<ul>
+<li><a
+href="https://stackoverflow.com/questions/37694987/connecting-to-postgresql-in-a-docker-container-from-outside">from
+stack overflow</a></li>
+</ul>
+</section>
+
+<footer>
+<span>&copy; 2022 <a href="https://www.library.caltech.edu/copyright">Caltech Library</a></span>
+<address>1200 E California Blvd, Mail Code 1-32, Pasadena, CA 91125-3200</address>
+<span><a href="mailto:library@caltech.edu">Email Us</a></span>
+<span>Phone: <a href="tel:+1-626-395-3405">(626)395-3405</a></span>
+</footer>
+</body>
+</html>

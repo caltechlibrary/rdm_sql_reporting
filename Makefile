@@ -73,7 +73,7 @@ about.md: codemeta.json $(PROGRAMS)
 test: $(PACKAGE)
 	go test
 
-website: clean-website
+website: #clean-website
 	make -f website.mak
 
 status:
