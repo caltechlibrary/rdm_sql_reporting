@@ -1,0 +1,52 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/BSD-3-Clause-Clear",
+    "codeRepository": "https://github.com/caltechlibrary/rdm_sql_reporting",
+    "dateCreated": "2023-05-12",
+    "issueTracker": "https://github.com/caltechlibrary/rdm_sql_reporting/issues",
+    "name": "rdm_sql_reporting",
+    "version": "0.0.1",
+    "description": "This is an ad-hoc collection of Bash scripts for working with Invenio RDM repositories via Postgres database tables",
+    "applicationCategory": "data mining, rdms",
+    "releaseNotes": "This is just a proof of concept collection demonstrating the easy of creating simple CLI to do data analysis on Invenio RDM content via the Postgres database and client.",
+    "developmentStatus": "concept",
+    "funder": {
+        "@type": "Organization",
+        "name": "Caltech Library"
+    },
+    "keywords": [
+        "rdms",
+        "data analysis"
+    ],
+    "programmingLanguage": [
+        "Go",
+        "SQL",
+		"Bash",
+		"Make"
+    ],
+    "operatingSystem": [
+        "Linux",
+        "Windows",
+        "macOS"
+    ],
+    "softwareRequirements": [
+        "Go 1.19.5 or better",
+        "Bash",
+        "Make",
+        "Postgres 15 or better client"
+    ],
+    "author": [
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0003-0900-6903",
+            "givenName": "R. S.",
+            "familyName": "Doiel",
+            "email": "rsdoiel@caltech.edu",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Caltech Library"
+            }
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+#
+# This is an example Postgres environment file used by
+# the scripts in rdm_sql_reporting.
+# 
+# The configuration file should be named like.
+#
+#      <REPO_ID>_postgres_env.cfg
+#
+export DB_NAME="<DB_USER_NAME_GOES_HERE>"
+export DB_USERNAME="<DB_NAME_GOES_HERE>"
