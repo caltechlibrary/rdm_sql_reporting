@@ -34,7 +34,7 @@ function restore_postgres_from() {
 	BACKUP_FILE="$1"
 	dropdb --if-exists "${DB_NAME}"
 	createdb "${DB_NAME}"
-	zcat "${BACKUP_FILE}" | psql -d "${DB_NAME}"
+	gzcat "${BACKUP_FILE}" | psql -d "${DB_NAME}"
 }
 
 function run_restore() {
