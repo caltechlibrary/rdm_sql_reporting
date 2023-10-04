@@ -32,9 +32,15 @@ EOT
 
 function restore_postgres_from() {
 	BACKUP_FILE="$1"
+	# Need to figure out which zcat to use, macOS it's gzcat, everything else seems to be zcat.
+	if command -v zcat &>/dev/null; then
+		ZCAT="zcat"
+	elif command -v gzcat &>/dev/null; then
+		ZCAT="gzcat"
+	fi
 	dropdb --if-exists "${DB_NAME}"
 	createdb "${DB_NAME}"
-	gzcat "${BACKUP_FILE}" | psql -d "${DB_NAME}"
+	"$ZCAT" "${BACKUP_FILE}" | psql -d "${DB_NAME}"
 }
 
 function run_restore() {
